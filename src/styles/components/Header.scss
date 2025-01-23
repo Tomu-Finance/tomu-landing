@@ -1,0 +1,81 @@
+@use '../main.scss' as *;
+
+.header {
+  position: relative;
+  margin: 0 auto;
+  padding-left: toRem(29);
+  padding-right: toRem(12);
+  padding-top: toRem(8);
+  padding-bottom: toRem(8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: toRem(100);
+  background: #00ffb7;
+  width: toRem(677);
+  height: toRem(69);
+  backdrop-filter: blur(toRem(15));
+  z-index: 20;
+
+  @include media('<=phone-tab') {
+    width: toRem(403);
+    height: toRem(55);
+
+    padding-left: toRem(19);
+    padding-right: toRem(8);
+    padding-top: toRem(7);
+    padding-bottom: toRem(7);
+  }
+
+  &__logo {
+    width: toRem(86.27);
+    height: toRem(20);
+
+    @include media('<=phone-tab') {
+      width: toRem(77.64);
+      height: toRem(18);
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: toRem(26);
+
+    @include media('<=phone-tab') {
+      gap: toRem(20);
+    }
+
+    &__text {
+      color: #00140f;
+      font-family: $font-inter;
+      font-size: toRem(16);
+      font-weight: 500;
+      line-height: toRem(19.36);
+      cursor: pointer;
+    }
+
+    &__button {
+      border-radius: toRem(100);
+      background-color: #00140f;
+      box-sizing: border-box;
+      width: toRem(132);
+      height: toRem(53);
+
+      color: #ffffff;
+      font-family: $font-inter;
+      font-size: toRem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: toRem(19.36);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      @include media('<=phone-tab') {
+        height: toRem(40);
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@use '../main.scss' as *;
+
+.appLayout__cont {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  background-color: #00e5a4;
+  padding: toRem(40);
+  padding-left: toRem(155);
+  padding-right: toRem(155);
+  padding-bottom: 0;
+  overflow-x: hidden;
+
+  @include media('<=tablet') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media('<=phone-tab') {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: toRem(21);
+  }
+
+  &__leftBorder {
+    width: toRem(1.5);
+    height: 100%;
+    position: absolute;
+    left: toRem(155);
+    background-color: #00cc92;
+    top: 0;
+    opacity: 0.5;
+
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  &__rightBorder {
+    width: toRem(1.5);
+    height: 100%;
+    position: absolute;
+    right: toRem(155);
+    background-color: #00cc92;
+    top: 0;
+    opacity: 0.5;
+
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  &__centerBorder {
+    width: toRem(1230);
+    height: toRem(1.5);
+    position: absolute;
+    background-color: #00cc92;
+    top: toRem(642);
+    opacity: 0.5;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+}

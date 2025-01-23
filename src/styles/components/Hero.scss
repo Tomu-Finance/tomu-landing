@@ -1,0 +1,180 @@
+@use '../main.scss' as *;
+
+.hero {
+  position: relative;
+  height: toRem(1180.5);
+  display: flex;
+  flex-direction: column;
+
+  visibility: hidden;
+  opacity: 0;
+
+  @include media('<=tablet') {
+    height: toRem(900);
+  }
+
+  @include media('<=phone-tab') {
+    height: toRem(658);
+  }
+
+  &__xion {
+    margin-top: toRem(40) !important;
+    width: fit-content;
+    height: toRem(43);
+    padding: toRem(10) toRem(20);
+    display: flex;
+    align-items: center;
+    gap: toRem(12);
+    background-color: #ccfff1;
+    margin: 0 auto;
+    border: toRem(1) solid #00af7e;
+    border-radius: toRem(100);
+
+    @include media('<=phone-tab') {
+      margin-top: toRem(55) !important;
+    }
+
+    &__active {
+      width: toRem(20);
+      height: toRem(20);
+    }
+
+    &__text {
+      font-family: $font-inter;
+      font-size: toRem(16);
+      font-weight: 400;
+      line-height: toRem(23);
+      color: #00140f;
+    }
+  }
+
+  &__heading {
+    width: toRem(418);
+    height: toRem(216);
+    margin: 0 auto;
+    margin-top: toRem(25);
+
+    font-family: $font-instrument;
+    font-size: toRem(108);
+    font-weight: 400;
+    line-height: toRem(108);
+    text-align: center;
+    color: #00140f;
+
+    @include media('<=phone-tab') {
+      margin-top: toRem(16);
+      width: toRem(259);
+      height: toRem(140);
+
+      font-family: $font-instrument;
+      font-size: toRem(68);
+      font-weight: 400;
+      line-height: toRem(70);
+      text-align: center;
+      color: #00140f;
+    }
+
+    &__span {
+      color: #ffffff;
+    }
+  }
+
+  &__subheading {
+    margin: 0 auto;
+    margin-top: toRem(16);
+    width: toRem(582);
+    height: toRem(46);
+
+    font-family: $font-inter;
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: toRem(23);
+    text-align: center;
+    color: #00140f;
+
+    @include media('<=phone-tab') {
+      margin-top: toRem(5);
+      width: toRem(328);
+      height: toRem(69);
+      line-height: toRem(20);
+    }
+  }
+
+  &__waitlist {
+    width: toRem(371);
+    height: toRem(102);
+    margin: 0 auto;
+    margin-top: toRem(16);
+    padding-top: toRem(5.5);
+    padding-bottom: toRem(5.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media('<=phone-tab') {
+      margin-top: toRem(8);
+      padding: toRem(12) toRem(18.5);
+    }
+
+    &__text {
+      font-family: $font-inter;
+      font-size: toRem(20);
+      font-weight: 500;
+      line-height: toRem(23);
+      text-align: center;
+      color: #00140f;
+      margin-top: toRem(5.5);
+
+      @include media('<=phone-tab') {
+        font-size: toRem(18);
+        margin-top: toRem(8);
+      }
+    }
+
+    &__button {
+      margin-top: toRem(12);
+      border-radius: toRem(100);
+      background-color: #00140f;
+      box-sizing: border-box;
+      padding: toRem(17) toRem(21);
+
+      color: #ffffff;
+      font-family: $font-inter;
+      font-size: toRem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: toRem(19.36);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      @include media('<=phone-tab') {
+        padding: toRem(10) toRem(21);
+        margin-top: toRem(10);
+      }
+    }
+  }
+
+  &__image {
+    width: toRem(1125);
+    height: toRem(793);
+    border-radius: toRem(20);
+    position: absolute;
+    bottom: toRem(-75);
+    object-fit: contain;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media('<=tablet') {
+      width: toRem(670);
+      height: toRem(520);
+    }
+
+    @include media('<=phone-tab') {
+      width: toRem(397);
+      height: toRem(280);
+      border-radius: toRem(5);
+    }
+  }
+}
