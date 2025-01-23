@@ -5,6 +5,7 @@ import heroImgPhone from '../assets/images/landing-phone.webp';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive';
+import { GoArrowRight } from 'react-icons/go';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -43,9 +44,12 @@ const Hero = () => {
       </p>
 
       <div className="hero__waitlist">
-        <p className="hero__waitlist__text" data-animation="opacIn">
-          Be the first to know when we launch -{'>'}
-        </p>
+        <div className="hero__waitlist__wrapper">
+          <p className="hero__waitlist__text" data-animation="opacIn">
+            Be the first to know when we launch
+          </p>
+          <GoArrowRight className="hero__waitlist__icon" />
+        </div>
         <button className="hero__waitlist__button">Join waitlist</button>
       </div>
 

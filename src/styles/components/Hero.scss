@@ -117,6 +117,12 @@
       padding: toRem(12) toRem(18.5);
     }
 
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      gap: toRem(3);
+    }
+
     &__text {
       font-family: $font-inter;
       font-size: toRem(20);
@@ -130,6 +136,11 @@
         font-size: toRem(18);
         margin-top: toRem(8);
       }
+    }
+
+    &__icon {
+      width: toRem(20);
+      height: toRem(20);
     }
 
     &__button {
