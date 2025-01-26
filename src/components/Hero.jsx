@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive';
 import { GoArrowRight } from 'react-icons/go';
+import Form from './Form';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -50,8 +51,9 @@ const Hero = () => {
           </p>
           <GoArrowRight className="hero__waitlist__icon" />
         </div>
-        <button className="hero__waitlist__button">Join waitlist</button>
       </div>
+
+      <Form />
 
       <img
         className="hero__image"
