@@ -1,0 +1,75 @@
+@use '../main.scss' as *;
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: toRem(562);
+  height: toRem(69);
+  margin: 0 auto;
+  z-index: 5;
+
+  @include media('<=phone-tab') {
+    width: toRem(403);
+    height: toRem(55);
+  }
+
+  &__input {
+    width: toRem(562);
+    height: toRem(69);
+    background-color: #ccfff1;
+    border-radius: toRem(100);
+    outline: none;
+    border: none;
+    position: relative;
+    padding-left: toRem(41);
+
+    font-family: $font-inter;
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: toRem(19.36);
+    text-align: left;
+    color: #00140f;
+
+    &::placeholder {
+      font-family: $font-inter;
+      font-size: toRem(16);
+      font-weight: 400;
+      line-height: toRem(19.36);
+      text-align: left;
+    }
+
+    @include media('<=phone-tab') {
+      width: toRem(403);
+      height: toRem(55);
+      padding-left: toRem(27);
+    }
+  }
+
+  &__button {
+    margin-top: toRem(12);
+    border-radius: toRem(100);
+    background-color: #00140f;
+    box-sizing: border-box;
+    padding: toRem(17) toRem(21);
+
+    color: #ffffff;
+    font-family: $font-inter;
+    font-size: toRem(16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: toRem(19.36);
+    text-align: center;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: toRem(8.5);
+    bottom: toRem(7.5);
+
+    @include media('<=phone-tab') {
+      padding: toRem(10) toRem(21);
+      margin-top: toRem(10);
+    }
+  }
+}
