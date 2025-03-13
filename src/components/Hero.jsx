@@ -1,32 +1,28 @@
-import active from '../assets/icons/active.svg';
-import '../styles/components/Hero.scss';
-import heroImg from '../assets/images/landing.webp';
-import heroImgPhone from '../assets/images/landing-phone.webp';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { useMediaQuery } from 'react-responsive';
-import { GoArrowRight } from 'react-icons/go';
-import Form from './Form';
+import active from "../assets/icons/active.svg"
+import "../styles/components/Hero.scss"
+import heroImg from "../assets/images/landing.webp"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { GoArrowRight } from "react-icons/go"
+import Form from "./Form"
 
 const Hero = () => {
-  const containerRef = useRef(null);
-
-  const isPhone = useMediaQuery({ query: '(max-width: 500px)' });
+  const containerRef = useRef(null)
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline()
     const init = () => {
-      tl.from(containerRef.current, { ease: 'linear', autoAlpha: 0 }).to(
+      tl.from(containerRef.current, { ease: "linear", autoAlpha: 0 }).to(
         containerRef.current,
         {
-          ease: 'linear',
+          ease: "linear",
           autoAlpha: 1,
-        },
-      );
-    };
+        }
+      )
+    }
 
-    init();
-  }, []);
+    init()
+  }, [])
 
   return (
     <div className="hero" ref={containerRef}>
@@ -55,13 +51,9 @@ const Hero = () => {
 
       <Form />
 
-      <img
-        className="hero__image"
-        src={isPhone ? heroImgPhone : heroImg}
-        alt="tomu image"
-      />
+      <img className="hero__image" src={heroImg} alt="tomu image" />
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
